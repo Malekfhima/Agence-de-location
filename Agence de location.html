@@ -15,7 +15,7 @@
     <main>
         <section id="enregistrement">
             <h2>Enregistrement des locations de voiture</h2>
-            <form method="post" action="script.php">
+            <form method="post" action="script.php" onsubmit="return verif_vide()">
                 <label for="mat">Matricule de voiture:</label>
                 <input type="text" id="mat" name="mat"  placeholder="Entrez votre matricule" required>
                 <label for="cc">Contact client(e):</label>
@@ -29,7 +29,7 @@
                 <label for="contact-chauffeur">Contact chauffeur:</label>
                 <input type="text" id="cch" name="cch"  placeholder="Entre votre Num-Tel" required>
 
-                <button type="submit" onsubmit="return verif_vide()">Enregistrer</button>
+                <button type="submit">Enregistrer</button>
                 <button type="button">Modifier</button>
                 <button type="button">Annuler</button>
             </form>
