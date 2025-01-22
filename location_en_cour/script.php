@@ -1,5 +1,5 @@
 <?php
-include ("conx.php");
+include ("cnx.php");
 extract($_POST);
 $res=mysqli_query($cnx,"SELECT * FROM liste_vc WHERE (mat='$mat');");
 $nb=mysqli_num_rows($res);
