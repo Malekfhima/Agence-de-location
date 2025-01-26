@@ -36,7 +36,8 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Les lignes des locations seront insérées ici dynamiquement -->
+                <?php
+                ?>
             </tbody>
         </table>
         </section>
