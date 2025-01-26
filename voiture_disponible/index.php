@@ -11,8 +11,8 @@
         <nav>
             <ul>
                 <li><a href="../accueil/index.html">Accueil</a></li>
-                <li><a href="../enregister/index.html">Enregistrement des location de voiture</a></li>
-                <li><a href="index.html">Voiture Disponibles</a></li>
+                <li><a href="../enregister/index.html">Enregistrement des locations de voiture</a></li>
+                <li><a href="index.php">Voitures Disponibles</a></li>
                 <li><a href="../location_en_cour/index.html">Liste des locations en cours</a></li>
                 <li><a href="../insertion_voiture/index.html">Insertion des voitures</a></li>
             </ul>
@@ -22,17 +22,27 @@
 
     <main>
         <aside id="voiture">
-            <h2>Voiture Disponibles</h2>
+            <h2>Voitures Disponibles</h2>
             <table>
                 <thead>
                     <tr>
                         <th>Numéro matricule</th>
                         <th>Nom voiture</th>
-                        <th>Le location (TDN)</th>
+                        <th>Location (TDN)</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Les lignes des voitures seront insérées ici dynamiquement -->
+                    <?php
+                    include("../cnx.php");
+                    $res = mysqli_query($cnx, "SELECT * FROM voiture");
+                    while ($row = mysqli_fetch_assoc($res)) {
+                        echo "<tr>";
+                        echo "<td>" . htmlspecialchars($row['mat']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['nom']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['prix']) . "</td>";
+                        echo "</tr>";
+                    }
+                    ?>
                 </tbody>
             </table>
         </aside>
