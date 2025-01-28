@@ -35,7 +35,7 @@
                 <tbody>
                     <?php
                     include("../cnx.php");
-                    $rs2=mysqli_query($cnx,"SELECT * from liste_vc WHERE etat='mawjouda!;'");
+                    $rs2=mysqli_query($cnx,"SELECT * from liste_vc WHERE etat='mawjouda!';");
                     $nb=mysqli_num_rows($rs2);
                     if ($nb>0){
                         $res = mysqli_query($cnx, "SELECT * FROM voiture");
