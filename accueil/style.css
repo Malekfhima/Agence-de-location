@@ -15,6 +15,10 @@ body {
     background: #252839;
 }
 
+:root {
+    --clr: #ff5733; /* Define your color variable here */
+}
+
 ul {
     position: relative;
     display: flex;
@@ -34,7 +38,7 @@ ul li a {
     line-height: 1em;
     text-transform: uppercase;
     color: transparent;
-    -webkit-text-stroke: 1px rgba(255,255,255,0.5);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
 }
 
 ul li a::before {
