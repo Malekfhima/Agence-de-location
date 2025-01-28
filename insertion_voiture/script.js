@@ -5,7 +5,7 @@ function verif(){
     if(!verifMat(mat)){
         alert("matricule 8alta y bhiiiiim!!");
         return false;
-    }else if(!(mat.lenghth==0)){
+    }else if(!(nom.lenghth==0)){
         alert("sem krhba 8alte");
         return false;
     }
