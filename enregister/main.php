@@ -13,5 +13,6 @@ if(mysqli_num_rows($reset) === 1){
     $etat = "mawjouda!";
 }
 $res = mysqli_query($cnx ,"INSERT into liste_vc (mat,cc,nc,nb_j,date_dep,c_ch,m_t,etat) values('$mat','$cc','$nc','$dur','$d','$cch','$mt','$etat')");
+header("location: ../enregister/index.html");
 mysqli_close($cnx);
 ?>

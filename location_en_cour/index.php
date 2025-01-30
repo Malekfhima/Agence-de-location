@@ -38,6 +38,20 @@
             </thead>
             <tbody>
                 <?php
+                                    include("../cnx.php");
+                                    $res=mysqli_query($cnx,"SELECT * from liste_vc WHERE etat='mawjouda!';");
+                                    while ($row = mysqli_fetch_array($res)) {
+                                        echo "<tr>";
+                                        echo "<td>" . htmlspecialchars($row[1]) . "</td>";
+                                        echo "<td>" . htmlspecialchars($row[2]) . "</td>";
+                                        echo "<td>" . htmlspecialchars($row[3]) . "</td>";
+                                        echo "<td>" . htmlspecialchars($row[4]) . "</td>";
+                                        echo "<td>" . htmlspecialchars($row[5]) . "</td>";
+                                        echo "<td>" . htmlspecialchars($row[6]) . "</td>";
+                                        echo "<td>" . htmlspecialchars($row[7]) . "</td>";
+                                        echo "<td>" . htmlspecialchars($row[8]) . "</td>";
+                                        echo "</tr>";
+                                    }
                 ?>
             </tbody>
         </table>
