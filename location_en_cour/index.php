@@ -15,7 +15,7 @@
                 <li><a href="../enregister/index.html">Enregistrement des location de voiture</a></li>
                 <li><a href="../voiture_disponible/index.php">Voiture Disponibles</a></li>
                 <li><a href="index.html">Liste des locations en cours</a></li>
-                <li><a href="../insertion_voiture/index.html">Insertion des voitures</a></li>
+                <li><a href="../insertion_voiture/index.php">Insertion des voitures</a></li>
             </ul>
         </nav>
         <h1>Agence de Location de Voitures</h1>
