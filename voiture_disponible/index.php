@@ -35,17 +35,18 @@
                 <tbody>
                     <?php
                     include("../cnx.php");
-                    $rs2=mysqli_query($cnx,"SELECT * from liste_vc WHERE etat='mawjouda!;'");
-                    $nb=mysqli_num_rows($rs2);
-                    if ($nb>0){
-                        $res = mysqli_query($cnx, "SELECT * FROM voiture");
-                    while ($row = mysqli_fetch_assoc($res)) {
-                        echo "<tr>";
-                        echo "<td>" . htmlspecialchars($row['mat']) . "</td>";
-                        echo "<td>" . htmlspecialchars($row['nom']) . "</td>";
-                        echo "<td>" . htmlspecialchars($row['prix']) . "</td>";
-                        echo "</tr>";
-                    }
+                    $res = mysqli_query($cnx,"SELECT * from voiture ");
+                    while($t = mysqli_fetch_array($res)){
+                        $mat = $t[1];
+                        $rs2 = mysqli_query($cnx , "SELECT * from liste_vc where mat = '$mat';");
+                        $nb = mysqli_num_rows($rs2);
+                        if($nb===0){
+                            echo "<tr>";
+                            echo "<td>" . htmlspecialchars($t[1]) . "</td>";
+                            echo "<td>" . htmlspecialchars($t[2]) . "</td>";
+                            echo "<td>" . htmlspecialchars($t[3]) . "</td>";
+                            echo "</tr>";
+                        }
                     }
                     ?>
                 </tbody>
